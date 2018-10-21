@@ -1,0 +1,66 @@
+***************CUSTOMER******************
+
+insert into customer values(100,'poonam','pandey','wipro','hinjewadi','pune','992929292');
+insert into customer values(101,'harshada','pandey','wipro','hinjewadi','pune','992929292');
+insert into customer values(102,'priyanka','pandey','wipro','hinjewadi','mumbai','992929292');
+insert into customer values(103,'hansika','pandey','wipro','hinjewadi','nagpur','992929292');
+insert into customer values(104,'sonal','pandey','wipro','hinjewadi','sangali','992929292');
+insert into customer values(105,'shahrukh','pandey','wipro','hinjewadi','satara','992929292');
+insert into customer values(106,'salman','pandey','wipro','hinjewadi','mumbai','992929292');
+insert into customer values(107,'amit','pandey','wipro','hinjewadi','pune','992929292');
+insert into customer values(108,'akshay','pandey','wipro','hinjewadi','kolkata','992929292');
+insert into customer values(109,'amitabh','pandey','wipro','hinjewadi','bengalore','992929292');
+
+***************PUBLISHER******************
+
+insert into publisher values(1100,'shadab_publisher','pune','2011');
+insert into publisher values(1101,'aman_publisher','pune','2016');
+insert into publisher values(1102,'avinash_publisher','mumbai','2016');
+insert into publisher values(1103,'payod_publisher','nagpur','2017');
+insert into publisher values(1104,'puru_publisher','kolkata','2016');
+insert into publisher values(1105,'rohan_publisher','satara','2011');
+insert into publisher values(1106,'sumit_publisher','mumbai','2011');
+insert into publisher values(1107,'suraj_publisher','pune','2017');
+insert into publisher values(1108,'yash_publisher','kolkata','2015');
+insert into publisher values(1109,'amol_publisher','bengalore','2015');
+
+***************AUTHOR******************
+
+insert into author values(2100,'shadab_author','INDIA');
+insert into author values(2101,'aman_author','INDIA');
+insert into author values(2102,'avinash_author','AUSTRALIA');
+insert into author values(2103,'payod_author','AFRICA');
+insert into author values(2104,'puru_author','AFRICA');
+insert into author values(2105,'rohan_author','AFRICA');
+insert into author values(2106,'sumit_author','AUSTRALIA');
+insert into author values(2107,'suraj_author','INDIA');
+insert into author values(2108,'yash_author','AFRICA');
+insert into author values(2109,'amol_author','AFRICA');
+
+
+***************BOOK******************
+
+insert into book values(1234,'shadab_book',300,2100,1100,2002);
+insert into book values(3101,'aman_book',400,2101,1101,2002);
+insert into book values(3102,'avinash_book',500,2102,1102,2004);
+insert into book values(3103,'payod_book',300,2103,1103,2006);
+insert into book values(3104,'puru_book',400,2104,1104,2000);
+insert into book values(3105,'rohan_book',300,2105,1105,2015);
+insert into book values(3106,'sumit_book',600,2106,1106,2016);
+insert into book values(3107,'suraj_book',700,2107,1107,2001);
+insert into book values(3108,'yash_book',800,2108,1108,2003);
+insert into book values(3109,'amol_book',900,2109,1109,2015);
+
+
+***************ORDER******************
+
+insert into order_ values(9100,100,1234,2,'2017-06-21');
+insert into order_ values(9101,101,3101,1,'2018-04-01');
+insert into order_ values(9102,102,3102,4,'2017-04-11');
+insert into order_ values(9103,103,3103,1,'2018-06-01');
+insert into order_ values(9104,104,3104,2,'2017-05-11');
+insert into order_ values(9105,105,3105,2,'2018-06-21');
+insert into order_ values(9106,106,3106,1,'2018-01-01');
+insert into order_ values(9107,107,3107,1,'2017-03-11');
+insert into order_ values(9108,108,3108,1,'2018-06-01');
+insert into order_ values(9109,109,3109,1,'2018-02-11');

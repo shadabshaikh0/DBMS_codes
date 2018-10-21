@@ -1,0 +1,18 @@
+1) select * from customer NATURAL JOIN order_;
+
+2) select book.title,author.authorname,author.country from book INNER JOIN author ON book.author_no = author.author_no;
+
+3)select c.cust_no , c.cust_fname from customer c LEFT JOIN order_ o ON c.cust_no = o.cust_no where o.cust_no is NULL;
+
+4) select o.order_no ,b.title,o.ISBN from book b LEFT JOIN  order_ o ON o.ISBN = b.ISBN;
+
+5)select c.cust_fname, b.title, b.author_no,b.year from customer c INNER JOIN order_ o ON c.cust_no = o.cust_no INNER JOIN book b ON o.ISBN = b.ISBN where o.ISBN =1234;
+
+6)select c.cust_fname , count(o.ISBN) from customer c INNER JOIN order_ o ON o.cust_no = c.cust_no GROUP BY c.cust_no;
+
+7)select o.cust_no, o.order_no, o.ISBN from order_ o where o.ISBN IN (select ISBN from book where title LIKE '%mysql%');
+
+8)select c.cust_company from customer c where c.cust_no in (select cust_no from order_ where YEAR(odate) between 2015 AND 2015); 
+
+9) create view book_author as select b.ISBN, b.title,b.unitprice,b.author_no,b.year,a.authorname,a.country from author a, book b where a.author_no = b.author_no;
+

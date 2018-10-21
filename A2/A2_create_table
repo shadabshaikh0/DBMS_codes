@@ -1,0 +1,44 @@
+create table customer(
+	cust_no int(10) PRIMARY KEY,
+	cust_fname varchar(20),
+	cust_lname varchar(20),
+	cust_company varchar(20),
+	cust_addr varchar(50),
+	city varchar(20),
+	cust_phone varchar(10)
+);
+
+create table author(
+	author_no int(10) PRIMARY KEY,
+	authorname varchar(20),
+	country varchar(20)	
+);
+
+create table publisher(
+	publisher_no int(10) PRIMARY KEY,
+	publishername varchar(20),
+	publisheraddr varchar(20),
+	year int(4)
+);
+
+create table book(
+     ISBN varchar(20) PRIMARY KEY,
+     title varchar(20),
+     unitprice int(10),
+     author_no int(10),
+     publisher_no int(10),
+     year int(4),
+     constraint FK_book1 FOREIGN KEY (author_no) REFERENCES author(author_no)  ON DELETE CASCADE ON UPDATE CASCADE,
+     constraint FK_book2 FOREIGN KEY (publisher_no) REFERENCES publisher(publisher_no) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table order_(
+	order_no int(10) PRIMARY KEY,
+	cust_no int(10),
+	ISBN varchar(20),
+	qty int(10),
+	odate date,
+    constraint FK_order1 FOREIGN KEY (cust_no) REFERENCES customer(cust_no)  ON DELETE CASCADE ON UPDATE CASCADE,
+    constraint FK_order2 FOREIGN KEY (ISBN) REFERENCES book(ISBN) ON DELETE CASCADE ON UPDATE CASCADE,
+);
+

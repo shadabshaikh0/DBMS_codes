@@ -1,0 +1,18 @@
+2) select * from customer where (city = 'pune' or city = 'mumbai') and (cust_fname LIKE 'p%' or cust_fname LIKE 'h%'); 
+
+3) select DISTINCT city from customer;
+
+4) update book set unitprice = unitprice + (unitprice * 0.05) where year=2015;
+
+5) delete from customer where city = 'pune';
+
+6) select * from author where country = 'INDIA' UNION select * from author where country = 'AUSTRALIA';
+
+7) select DISTINCT * from publisher where year IN (2015,2016);
+
+8.1) select * from book where unitprice in(select max(unitprice ) from book);
+8.2) select * from book where unitprice between 300 AND 400;
+
+9) select title,unitprice,year from book order by year DESC;
+
+10)select title,author_no,publisher_no from book where year in(2002,2004,2006);
